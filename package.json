@@ -1,0 +1,25 @@
+{
+  "name": "shex-validator-user",
+  "version": "1.0.0",
+  "description": "",
+  "main": "shex-validator-user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "npx webpack --config webpack.config.js --mode production --profile --json > browser/compilation-stats.json",
+    "webpack-analyzer": "webpack-bundle-analyzer ./browser/compilation-stats.json",
+    "webpack-monitor": "WEBPACK_MONITOR=true npx webpack --config webpack.config.js --mode production --profile --json > browser/compilation-stats.json"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@shexjs/validator": "file:../../checkouts/shexSpec/shex.js/packages/shex-validator"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-monitor": "^1.0.14"
+  }
+}
